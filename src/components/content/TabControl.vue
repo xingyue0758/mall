@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         itemclick(index) {
-            this.currentindex = index;
+            this.currentindex = index; 
             this.$emit('tabClick', index)
         }
     }

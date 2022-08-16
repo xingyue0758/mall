@@ -1,19 +1,15 @@
 <template>
     <div class="goodslist clearfix">
-        <div class="goodslistitem" v-for="items in goods">
-            <a :href="items.link">
-                <img :src="items.show.img" alt="">
-            </a>
-            <p>{{ items.title }}</p>
-            <span class="price">￥{{ items.price }}</span> |
-            <span class="cfav">{{ items.cfav }}件</span>
-        </div>
+        <GoodsListItem v-for="item in goods" :goodsitem="item"></GoodsListItem>
     </div>
 </template>
 
 <script>
+import GoodsListItem from "@/components/content/GoodsListItem.vue";
 export default {
+    components: { GoodsListItem },
     props: {
+
         goods: {
             type: Array,
             default() {
@@ -42,7 +38,7 @@ export default {
 
 }
 
-.goodslistitem a img {
+.goodslistitem img {
     z-index: -4;
     height: 400px;
     width: 100%;

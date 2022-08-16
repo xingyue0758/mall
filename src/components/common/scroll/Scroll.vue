@@ -40,23 +40,25 @@ export default {
         this.scroll.on('scroll', (popo) => {
             this.$emit('scroll', popo)
         });
-        this.scroll.on('pullingUp',()=>{
+        this.scroll.on('pullingUp', () => {
             this.$emit('pullingUp')
         });
 
 
 
     },
-    methods:{
-        finishPullUp(){
+    methods: {
+        finishPullUp() {
             this.scroll.finishPullUp()
+        },
+        refresh() {
+            this.scroll.refresh();
+            
         }
     }
 }
 </script>
 
 <style>
-/* .content{
-    position: relative;
-} */
+
 </style>

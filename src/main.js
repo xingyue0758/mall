@@ -2,15 +2,22 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import toast from '@/components/common/toast/index'
+import Fastclick from 'fastclick'
+import lazyload from 'vue-lazyload'
 // import axios from 'axios'
 // import '@/swiper-bundle.esm.browser.js';
-
+Vue.prototype.$bus = new Vue()
+Vue.use(toast)
+Vue.use(lazyload)
+Fastclick.attach(document.body)
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  
+
+
   render: h => h(App)
 }).$mount('#app')
 // axios({

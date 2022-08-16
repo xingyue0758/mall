@@ -72,4 +72,4 @@ export default {
 .active {
     color: activeColor
 }
-</style>
+</style >
